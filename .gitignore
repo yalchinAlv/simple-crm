@@ -2,3 +2,4 @@ out/production/simple-crm/
 out/production/
 out/production/*/
 out/production/*/*/
+.idea/workspace.xml
