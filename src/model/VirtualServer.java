@@ -1,16 +1,21 @@
 package model;
 
+import java.util.UUID;
+
 public class VirtualServer {
 
+    private String id;
     private int virtualCores;
     private int virtualRam;
     private int disk_space;
     private String disk_type;
 
     public VirtualServer(){
+        this.id = UUID.randomUUID().toString();
     }
 
     public VirtualServer(int virtualCores, int virtualRam, int storage, String disk_type) {
+        this.id = UUID.randomUUID().toString();
         this.virtualCores = virtualCores;
         this.virtualRam = virtualRam;
         this.disk_space = storage;
@@ -47,5 +52,13 @@ public class VirtualServer {
 
     public void setDisk_type(String disk_type) {
         this.disk_type = disk_type;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }
