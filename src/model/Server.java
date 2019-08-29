@@ -9,6 +9,9 @@ public class Server {
     private int ram;
     private List<VirtualServer> virtualServers;
 
+    public Server() {
+    }
+
     public Server(int cores, int ram) {
         this.cores = cores;
         this.ram = ram;

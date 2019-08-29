@@ -1,24 +1,30 @@
 package model;
 
+import java.util.UUID;
+
 public class User {
 
-    private int id;
+    private String id;
     private String password;
     private String fullName;
     private String role;
 
-    public User(int id, String password, String fullName, String role) {
-        this.id = id;
+    public User() {
+        this.id = UUID.randomUUID().toString();
+    }
+
+    public User(String password, String fullName, String role) {
+        this.id = UUID.randomUUID().toString();
         this.password = password;
         this.fullName = fullName;
         this.role = role;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 

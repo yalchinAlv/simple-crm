@@ -1,17 +1,25 @@
 package model;
 
+import java.util.UUID;
+
 public class VirtualServer {
 
+    private String id;
     private int virtualCores;
     private int virtualRam;
-    private int disk_space;
-    private String disk_type;
+    private int diskSpace;
+    private String diskType;
 
-    public VirtualServer(int virtualCores, int virtualRam, int storage, String disk_type) {
+    public VirtualServer(){
+        this.id = UUID.randomUUID().toString();
+    }
+
+    public VirtualServer(int virtualCores, int virtualRam, int storage, String diskType) {
+        this.id = UUID.randomUUID().toString();
         this.virtualCores = virtualCores;
         this.virtualRam = virtualRam;
-        this.disk_space = storage;
-        this.disk_type = disk_type;
+        this.diskSpace = storage;
+        this.diskType = diskType;
     }
 
     public int getVirtualCores() {
@@ -30,19 +38,27 @@ public class VirtualServer {
         this.virtualRam = virtualRam;
     }
 
-    public int getDisk_space() {
-        return disk_space;
+    public int getDiskSpace() {
+        return diskSpace;
     }
 
-    public void setDisk_space(int disk_space) {
-        this.disk_space = disk_space;
+    public void setDiskSpace(int diskSpace) {
+        this.diskSpace = diskSpace;
     }
 
-    public String getDisk_type() {
-        return disk_type;
+    public String getDiskType() {
+        return diskType;
     }
 
-    public void setDisk_type(String disk_type) {
-        this.disk_type = disk_type;
+    public void setDiskType(String diskType) {
+        this.diskType = diskType;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }
