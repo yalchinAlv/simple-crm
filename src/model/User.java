@@ -4,6 +4,26 @@ import java.util.UUID;
 
 public class User {
 
+    public enum Role {
+        SUPER_ADMIN("Super Admin"),
+        LEGAL_TEAM("Legal Team"),
+        TECHNICAL_TEAM("Technical Team"),
+        SALES("Sales Team"),
+        TECHNICAL_SUPPORT_TEAM("Technical Support Team"),
+        FINANCE("Finance"),
+        MARKETING("Marketing"),
+        CUSTOMER("Customer");
+
+        private String value;
+        private Role(String value) {
+            this.value = value;
+        }
+
+        public String toString() {
+            return this.value;
+        }
+    }
+
     private String id;
     private String password;
     private String fullName;

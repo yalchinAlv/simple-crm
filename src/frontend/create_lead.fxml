@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="787.0" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <Label text="Create Lead" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="TOP_RIGHT">
+         <bottom>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="20.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField />
+                  <ComboBox prefHeight="31.0" prefWidth="73.0" promptText="GB" />
+                  <RadioButton mnemonicParsing="false" text="SSD" />
+                  <RadioButton mnemonicParsing="false" text="HDD" />
+               </children></HBox>
+         </bottom>
+         <center>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox prefHeight="316.0" prefWidth="252.0" spacing="20.0">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <ComboBox prefHeight="31.0" prefWidth="128.0" />
+                              <TextField prefHeight="31.0" prefWidth="50.0" />
+                              <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="35.0" text="+" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" />
+                        <HBox prefHeight="100.0" prefWidth="200.0" />
+                     </children></VBox>
+                  <VBox prefHeight="316.0" prefWidth="268.0" spacing="20.0">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0" />
+                        <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" />
+                        <HBox layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0" />
+                        <HBox layoutX="10.0" layoutY="210.0" prefHeight="100.0" prefWidth="200.0" />
+                        <HBox layoutX="10.0" layoutY="247.0" prefHeight="100.0" prefWidth="200.0" />
+                     </children></VBox>
+                  <VBox prefHeight="316.0" prefWidth="270.0" spacing="20.0">
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0" />
+                        <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" />
+                        <HBox layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0" />
+                        <HBox layoutX="10.0" layoutY="210.0" prefHeight="100.0" prefWidth="200.0" />
+                        <HBox layoutX="10.0" layoutY="247.0" prefHeight="100.0" prefWidth="200.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </center>
+      </BorderPane>
+   </center>
+   <bottom>
+      <Button mnemonicParsing="false" text="NEXT" BorderPane.alignment="BASELINE_CENTER" />
+   </bottom>
+</BorderPane>
