@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -10,7 +13,7 @@
    <children>
       <VBox alignment="CENTER">
          <children>
-            <Label text="STATUS: XX %">
+            <Label fx:id="statusLabel" text="STATUS: XX %">
                <font>
                   <Font size="25.0" />
                </font>
@@ -18,25 +21,32 @@
             <HBox>
                <children>
                   <Label text="Customer: " />
+                  <Button fx:id="customerButton" mnemonicParsing="false" text="Button" />
                </children></HBox>
             <HBox>
                <children>
                   <Label text="Start Date: " />
+                  <DatePicker />
                </children>
             </HBox>
             <HBox>
                <children>
                   <Label text="Stop Date: " />
+                  <DatePicker />
                </children>
             </HBox>
             <HBox>
                <children>
                   <Label text="Services: " />
+                  <VBox fx:id="serviceVbox1" />
+                  <VBox fx:id="serviceVbox2" />
+                  <VBox fx:id="serviceVbox3" />
                </children>
             </HBox>
             <HBox>
                <children>
                   <Label text="Discount: " />
+                  <TextField />
                </children></HBox>
             <HBox>
                <children>
