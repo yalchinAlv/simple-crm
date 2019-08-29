@@ -25,7 +25,11 @@ public class Lead {
         this.service = service;
         this.startDate = startDate;
         this.endDate = endDate;
-        this.monthlyFee = monthlyFee;
+
+        this.monthlyFee = 0;
+        for (VirtualServer vs : service) {
+            this.monthlyFee += vs.getMonthlyFee();
+        }
     }
 
     public String getName() {
