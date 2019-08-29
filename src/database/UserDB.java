@@ -1,3 +1,4 @@
+package database;
 /*  Database for the user
 */
 
@@ -43,8 +44,7 @@ public class UserDB {
     }
 
     //Return the user if user exists
-    // Keep boolean for now
-    public String takeUser( int id,String password) throws SQLException{
+    public String getUser( int id,String password) throws SQLException{
 
         String query =  "SELECT * FROM users WHERE (id = ?) and (password = ?)";
         PreparedStatement stmt = null;
