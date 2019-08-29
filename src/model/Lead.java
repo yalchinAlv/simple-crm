@@ -5,6 +5,28 @@ import java.util.List;
 
 public class Lead {
 
+    public enum Status {
+        INITIATE("Initiate (10%)"),
+        DEMO("Demo"),
+        QUALIFY("Qualify (20%)"),
+        DEVELOP("Develop (30%)"),
+        PROPOSE("Propose (40%)"),
+        PROVE("Prove (60%)"),
+        CLOSE("Close (80%)"),
+        SIGNUP("Signup (100%)"),
+        REJECTION("Rejection"),
+        POSTPONE("Postpone (0%)");
+
+        private String value;
+        private Status(String value) {
+            this.value = value;
+        }
+
+        public String toString() {
+            return this.value;
+        }
+    }
+
     private Customer owner;
     private String name;
     private String status;
