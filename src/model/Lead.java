@@ -1,20 +1,26 @@
 package model;
 
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.List;
 
 public class Lead {
 
     private String name;
+    private String status;
     private List<VirtualServer> service;
-    private LocalDateTime startDate;
-    private LocalDateTime endDate;
+    private LocalDate startDate;
+    private LocalDate endDate;
     private double monthlyFee;
+
+    private List<VirtualServer> demoService;
+    private LocalDate demoStartDate;
+    private LocalDate demoEndDate;
+    private double demoMonthlyFee;
 
     public Lead() {
     }
 
-    public Lead(String name, List<VirtualServer> service, LocalDateTime startDate, LocalDateTime endDate, double monthlyFee) {
+    public Lead(String name, List<VirtualServer> service, LocalDate startDate, LocalDate endDate, double monthlyFee) {
         this.name = name;
         this.service = service;
         this.startDate = startDate;
@@ -38,19 +44,19 @@ public class Lead {
         this.service = service;
     }
 
-    public LocalDateTime getStartDate() {
+    public LocalDate getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(LocalDateTime startDate) {
+    public void setStartDate(LocalDate startDate) {
         this.startDate = startDate;
     }
 
-    public LocalDateTime getEndDate() {
+    public LocalDate getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(LocalDateTime endDate) {
+    public void setEndDate(LocalDate endDate) {
         this.endDate = endDate;
     }
 
@@ -60,5 +66,45 @@ public class Lead {
 
     public void setMonthlyFee(double monthlyFee) {
         this.monthlyFee = monthlyFee;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public List<VirtualServer> getDemoService() {
+        return demoService;
+    }
+
+    public void setDemoService(List<VirtualServer> demoService) {
+        this.demoService = demoService;
+    }
+
+    public LocalDate getDemoStartDate() {
+        return demoStartDate;
+    }
+
+    public void setDemoStartDate(LocalDate demoStartDate) {
+        this.demoStartDate = demoStartDate;
+    }
+
+    public LocalDate getDemoEndDate() {
+        return demoEndDate;
+    }
+
+    public void setDemoEndDate(LocalDate demoEndDate) {
+        this.demoEndDate = demoEndDate;
+    }
+
+    public double getDemoMonthlyFee() {
+        return demoMonthlyFee;
+    }
+
+    public void setDemoMonthlyFee(double demoMonthlyFee) {
+        this.demoMonthlyFee = demoMonthlyFee;
     }
 }
