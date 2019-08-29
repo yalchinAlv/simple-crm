@@ -5,6 +5,7 @@ import java.util.List;
 
 public class Lead {
 
+    private Customer owner;
     private String name;
     private String status;
     private List<VirtualServer> service;
@@ -20,7 +21,7 @@ public class Lead {
     public Lead() {
     }
 
-    public Lead(String name, List<VirtualServer> service, LocalDate startDate, LocalDate endDate, double monthlyFee) {
+    public Lead(String name, List<VirtualServer> service, LocalDate startDate, LocalDate endDate) {
         this.name = name;
         this.service = service;
         this.startDate = startDate;
@@ -110,5 +111,13 @@ public class Lead {
 
     public void setDemoMonthlyFee(double demoMonthlyFee) {
         this.demoMonthlyFee = demoMonthlyFee;
+    }
+
+    public Customer getOwner() {
+        return owner;
+    }
+
+    public void setOwner(Customer owner) {
+        this.owner = owner;
     }
 }
