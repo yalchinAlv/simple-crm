@@ -2,10 +2,11 @@ package model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class Customer {
 
-    private int id;
+    private String id;
     private String companyName;
     private String companyLegalName;
     private String sector;
@@ -26,10 +27,11 @@ public class Customer {
     private List<Lead> leads;
 
     public Customer() {
+        this.id = UUID.randomUUID().toString();
     }
 
-    public Customer(int id, String companyName, String companyLegalName, String sector, String industry, String country, String city, String billingAddress, String legalAddress, String acqChannel, String cpName, String cpEmail, String cpLandNum, String cpCellNum, String cpPhoto, String salesOwner) {
-        this.id = id;
+    public Customer(String companyName, String companyLegalName, String sector, String industry, String country, String city, String billingAddress, String legalAddress, String acqChannel, String cpName, String cpEmail, String cpLandNum, String cpCellNum, String cpPhoto, String salesOwner) {
+        this.id = UUID.randomUUID().toString();
         this.companyName = companyName;
         this.companyLegalName = companyLegalName;
         this.sector = sector;
@@ -50,11 +52,11 @@ public class Customer {
         this.leads = new ArrayList<>();
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
