@@ -13,7 +13,7 @@ public class User {
         this.id = UUID.randomUUID().toString();
     }
 
-    public User(int id, String password, String fullName, String role) {
+    public User(String password, String fullName, String role) {
         this.id = UUID.randomUUID().toString();
         this.password = password;
         this.fullName = fullName;
