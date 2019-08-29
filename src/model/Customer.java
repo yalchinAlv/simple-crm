@@ -25,6 +25,9 @@ public class Customer {
     private List<String> techOwners;
     private List<Lead> leads;
 
+    public Customer() {
+    }
+
     public Customer(int id, String companyName, String companyLegalName, String sector, String industry, String country, String city, String billingAddress, String legalAddress, String acqChannel, String cpName, String cpEmail, String cpLandNum, String cpCellNum, String cpPhoto, String salesOwner) {
         this.id = id;
         this.companyName = companyName;

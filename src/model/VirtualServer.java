@@ -7,6 +7,9 @@ public class VirtualServer {
     private int disk_space;
     private String disk_type;
 
+    public VirtualServer(){
+    }
+
     public VirtualServer(int virtualCores, int virtualRam, int storage, String disk_type) {
         this.virtualCores = virtualCores;
         this.virtualRam = virtualRam;
