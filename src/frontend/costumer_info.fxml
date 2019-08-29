@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="800.0" prefWidth="735.0" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.CostumerInfo">
+   <children>
+      <Label layoutX="23.0" layoutY="26.0" text="Company Name:" />
+      <Label layoutX="23.0" layoutY="47.0" text="Company Legal Name:" />
+      <Label layoutX="23.0" layoutY="68.0" text="Sector:" />
+      <Label layoutX="23.0" layoutY="89.0" text="Industry:" />
+      <Label layoutX="23.0" layoutY="110.0" text="Country:" />
+      <Label layoutX="23.0" layoutY="131.0" text="City:" />
+      <Label layoutX="23.0" layoutY="152.0" text="Billing Address:" />
+      <Label layoutX="23.0" layoutY="173.0" text="Legal Address:" />
+      <Label layoutX="23.0" layoutY="194.0" text="Acquisition Channel:" />
+      <Label layoutX="23.0" layoutY="215.0" text="Contact Person Name:" />
+      <Label layoutX="23.0" layoutY="236.0" text="Contact Person Email:" />
+      <Label layoutX="23.0" layoutY="257.0" text="Contact Person Land Line Number:" />
+      <Label layoutX="23.0" layoutY="278.0" text="Contact Person Cell Phone Number:" />
+      <Label layoutX="637.0" layoutY="99.0" text="photo link" />
+      <Label layoutX="23.0" layoutY="299.0" text="Sales Owner:" />
+      <Label layoutX="23.0" layoutY="320.0" text="Legal Owners:" />
+      <Label layoutX="26.0" layoutY="451.0" text="Technical Owners:" />
+      <ImageView fitHeight="82.0" fitWidth="85.0" layoutX="637.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../backgroudPhotos/login%20background.jpg" />
+         </image></ImageView>
+      <SplitMenuButton layoutX="20.0" layoutY="577.0" mnemonicParsing="false" text="Leads:">
+        <items>
+          <MenuItem mnemonicParsing="false" text="Action 1" />
+          <MenuItem mnemonicParsing="false" text="Action 2" />
+           <MenuItem mnemonicParsing="false" text="Action 3" />
+        </items>
+      </SplitMenuButton>
+      <Label fx:id="companyName" layoutX="138.0" layoutY="26.0" text="Label" />
+      <Label fx:id="companyLegalName" layoutX="177.0" layoutY="47.0" text="Label" />
+      <Label fx:id="sector" layoutX="73.0" layoutY="68.0" text="Label" />
+      <Label fx:id="industry" layoutX="85.0" layoutY="89.0" text="Label" />
+      <Label fx:id="country" layoutX="85.0" layoutY="110.0" text="Label" />
+      <Label fx:id="city" layoutX="58.0" layoutY="131.0" text="Label" />
+      <Label fx:id="billingAddress" layoutX="130.0" layoutY="152.0" text="Label" />
+      <Label fx:id="legalAddress" layoutX="125.0" layoutY="173.0" text="Label" />
+      <Label fx:id="acqChannel" layoutX="163.0" layoutY="194.0" text="Label" />
+      <Label fx:id="cpName" layoutX="178.0" layoutY="215.0" text="Label" />
+      <Label fx:id="cpEmail" layoutX="172.0" layoutY="236.0" text="Label" />
+      <Label fx:id="cpLandNum" layoutX="259.0" layoutY="257.0" text="Label" />
+      <Label fx:id="cpCellNum" layoutX="266.0" layoutY="278.0" text="Label" />
+      <Label fx:id="salesOwner" layoutX="112.0" layoutY="299.0" text="Label" />
+      <TextArea layoutX="151.0" layoutY="457.0" prefHeight="115.0" prefWidth="272.0" text="bcjhsbdh&#10;kjdjhvfbskbvd&#10;vdsfbvbdfgbfdfffffffffffffffff&#10;dgbdfgbdfbg&#10;sdvdfbdgfb&#10;cdfvsdgbvsfgb&#10;sdbfdfgbdfg&#10;sjdbcvjks d" />
+      <TextArea layoutX="151.0" layoutY="327.0" prefHeight="105.0" prefWidth="272.0" text="sbdchjbzdsjhcbjhbasjhcbhjsbcvhjbs&#10;kbcxhjbs&#10;cshbchjasbcjdbjascd&#10;dhbcjscjshjbcdjhsjkcnsjkbc&#10;&#10;&#10;&#10;vsdfvsdfbv&#10;" />
+   </children>
+</AnchorPane>
