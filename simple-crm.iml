@@ -7,10 +7,10 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library" exported="">
+    <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/derby.jar!/" />
+          <root url="jar://$MODULE_DIR$/jfoenix-9.0.9.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

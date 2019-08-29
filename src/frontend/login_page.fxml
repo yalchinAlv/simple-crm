@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.LoginPage">
    <children>
       <ImageView fitHeight="400.0" fitWidth="800.0" pickOnBounds="true">
          <image>
@@ -22,7 +22,7 @@
          <font>
             <Font name="Monospaced Bold" size="22.0" />
          </font></Label>
-      <Button layoutX="275.0" layoutY="232.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="31.0" prefWidth="76.0" style="-fx-background-color: #99FFFF;" text="Login" textAlignment="CENTER">
+      <Button fx:id="login" layoutX="275.0" layoutY="232.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="31.0" prefWidth="76.0" style="-fx-background-color: #99FFFF;" text="Login" textAlignment="CENTER">
          <font>
             <Font name="Monospaced Bold" size="14.0" />
          </font></Button>
