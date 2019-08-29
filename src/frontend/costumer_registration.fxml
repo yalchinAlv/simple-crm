@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="770.0" prefWidth="656.0" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <VBox alignment="TOP_CENTER" prefHeight="128.0" prefWidth="650.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Costumer Registration">
+               <font>
+                  <Font size="40.0" />
+               </font></Label>
+            <Button mnemonicParsing="false" text="Select From existing" />
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="187.0">
+               <children>
+                  <Label text=" Company Name">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField prefWidth="330.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="140.0">
+               <children>
+                  <Label text=" Company Legal Name">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField prefWidth="330.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="265.0">
+               <children>
+                  <Label text=" Sector">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField prefWidth="330.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="251.0">
+               <children>
+                  <Label text=" Industry">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField prefWidth="330.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="252.0">
+               <children>
+                  <Label text=" Country">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField prefWidth="330.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="285.0">
+               <children>
+                  <Label text=" City">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField prefWidth="330.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="193.0">
+               <children>
+                  <Label text=" Billing  Address">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField prefWidth="330.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="205.0">
+               <children>
+                  <Label text=" Legal Address">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField prefWidth="330.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="158.0">
+               <children>
+                  <Label text=" Acquisition Channel">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField prefWidth="330.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="142.0">
+               <children>
+                  <Label text=" Contact Person Name">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField prefWidth="330.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="148.0">
+               <children>
+                  <Label text=" Contact Person Email">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField prefHeight="31.0" prefWidth="330.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="14.0">
+               <children>
+                  <Label prefHeight="27.0" prefWidth="307.0" text=" Contact Person Land Number">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField prefHeight="31.0" prefWidth="330.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="63.0" prefHeight="100.0" prefWidth="200.0" spacing="90.0">
+               <children>
+                  <Label text=" Contact Person Cell Number">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField prefWidth="330.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="108.0" prefHeight="100.0" prefWidth="200.0" spacing="218.0">
+               <children>
+                  <Label text=" Sales Owner">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField prefWidth="330.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="146.0" prefHeight="100.0" prefWidth="200.0" spacing="208.0">
+               <children>
+                  <Label text=" Legal Owners">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField prefWidth="330.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="179.0" prefHeight="100.0" prefWidth="200.0" spacing="176.0">
+               <children>
+                  <Label text=" Technical Owners">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField prefWidth="330.0" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="133.0" text="Next" textAlignment="RIGHT" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
