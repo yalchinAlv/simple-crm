@@ -1,5 +1,6 @@
 package frontend;
 
+import PDFgenerator.ReportGenerator;
 import javafx.application.Platform;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -21,6 +22,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
+
+import static java.time.temporal.ChronoUnit.MONTHS;
 
 public class LeadWindow {
 
@@ -68,15 +71,50 @@ public class LeadWindow {
             });
             System.out.println(statusComboBox.getValue());
             if (statusComboBox.getValue().equals(Lead.Status.PROPOSE.toString())) {
-                Button sendPDF = new Button("Generate & Send PDF");
+                Button sendPDF = new Button("Generate PDF");
                 sendPDF.setOnAction(new EventHandler<javafx.event.ActionEvent>() {
                     @Override
                     public void handle(javafx.event.ActionEvent event) {
                         // TODO: CALL AYDEMIR'S METHOD
+                        ReportGenerator gen = new ReportGenerator();
+                        int cpu = 0;
+                        int ram = 0;
+
+                        for (VirtualServer vs : lead.getService()) {
+                            cpu += vs.getVirtualCores();
+                            ram += vs.getVirtualRam();
+                        }
+                        System.out.println(gen.generateProposal("report", lead.getOwner().getCompanyName(),
+                                lead.getMonthlyFee(),Double.parseDouble(discountTextField.getText().equals("") ? "0" : discountTextField.getText() ),
+                                lead.getMonthlyFee() - (lead.getMonthlyFee() * Integer.parseInt(discountTextField.getText().equals("") ? "0" : discountTextField.getText()) / 100), cpu, ram));
                     }
                 });
                 System.out.println("adding");
                 mainVbox.getChildren().add(sendPDF);
+            }
+
+            if (statusComboBox.getValue().equals(Lead.Status.SIGNUP.toString())) {
+                Button generateInvoice = new Button("Generate Invoice");
+                generateInvoice.setOnAction(new EventHandler<javafx.event.ActionEvent>() {
+                    @Override
+                    public void handle(javafx.event.ActionEvent event) {
+                        // TODO: CALL AYDEMIR'S METHOD
+                        ReportGenerator gen = new ReportGenerator();
+                        int cpu = 0;
+                        int ram = 0;
+
+                        for (VirtualServer vs : lead.getService()) {
+                            cpu += vs.getVirtualCores();
+                            ram += vs.getVirtualRam();
+                        }
+
+                        System.out.println(gen.generatInvoice(lead.getMonthlyFee(), (int) MONTHS.between(lead.getStartDate(), lead.getEndDate()),
+                                discountTextField.getText().equals("") ? 0 : Double.parseDouble(discountTextField.getText()),
+                                lead.getOwner().getCompanyName(), lead.getOwner().getBillingAddress()));
+                        }
+                });
+                System.out.println("addinggg");
+                mainVbox.getChildren().add(generateInvoice);
             }
 
             if (statusComboBox.getValue().equals(Lead.Status.SIGNUP.toString())) {

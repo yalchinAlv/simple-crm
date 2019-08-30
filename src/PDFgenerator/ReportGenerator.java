@@ -13,7 +13,7 @@ public class ReportGenerator {
     String adress = "";
 
     public ReportGenerator(){
-        adress = "E:\\olddesktop\\Projects\\hckn\\simple-crm\\reports\\";
+        adress = "./reports/";
     }
 
 
@@ -45,7 +45,6 @@ public class ReportGenerator {
             p.setAlignment(Paragraph.ALIGN_JUSTIFIED);
             document.add(p);
             //document.add(chunk);
-
 
         }
         catch ( DocumentException de){

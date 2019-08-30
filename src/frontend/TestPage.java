@@ -38,7 +38,7 @@ public class TestPage {
         cust.setCompanyName("COMPANY NAIMU");
 
         lead.setOwner(cust);
-        lead.setStatus(Lead.Status.CLOSE.toString());
+        lead.setStatus(Lead.Status.SIGNUP.toString());
 
         controller.initData(new User("pass", "full", User.Role.LEGAL_TEAM.toString()), lead);
         Scene scene = new Scene(root);
