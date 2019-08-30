@@ -9,14 +9,14 @@ import javax.swing.table.AbstractTableModel;
 public class UserDB {
 
     // JDBC driver name and database URL
-    private static final String DATABASE_URL = "jdbc:derby:E:\\olddesktop\\Projects\\database\\lib\\SimplifyConsole";
+    private static final String DATABASE_URL = "jdbc:derby://10.10.0.244:1527/SimplifyConsole";
     private static final String USERNAME = "Console";
     private static final String ConnPASSWORD = "simple";
     private Connection connection;
 
     public UserDB() throws SQLException{
         //Create a connection
-        connection = DriverManager.getConnection( DATABASE_URL, USERNAME, ConnPASSWORD);
+        connection = DriverManager.getConnection( DATABASE_URL);
     }
 
 

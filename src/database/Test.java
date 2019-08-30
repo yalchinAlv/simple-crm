@@ -3,6 +3,7 @@ import model.Lead;
 import model.VirtualServer;
 
 import java.beans.Visibility;
+import java.sql.Driver;
 import java.time.LocalDate;
 import java.util.*;
 import java.time.LocalDateTime;
@@ -55,16 +56,19 @@ public class Test{
 //
 //        leadDB.insertLead(lead);
 
-          LeadDB leadDB = new LeadDB();
+//          LeadDB leadDB = new LeadDB();
 //          Lead myLead = leadDB.getLead("FirstLead");
 //
 //          System.out.println(myLead.getName());
 //
 //          List<VirtualServer> vs = myLead.getDemoService();
 //          System.out.println(vs.get(0).getId());
-          CustomerDB customerDB = new CustomerDB();
-          //List<String> myList = customerDB.getAllCustomers();
-          //System.out.println(myList.get(2));
+//          CustomerDB customerDB = new CustomerDB();
+//          List<String> myList = customerDB.getAllCustomers();
+//          System.out.println(myList.get(2));
+
+        System.out.println();
+        UserDB userDB = new UserDB();
     }
 
 
