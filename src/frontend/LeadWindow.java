@@ -483,6 +483,21 @@ public class LeadWindow {
                 updateButton.setDisable(true);
             }
 
+            updateButton.setOnAction(new EventHandler<javafx.event.ActionEvent>() {
+                @Override
+                public void handle(javafx.event.ActionEvent event) {
+                    if (lead.getStatus().equals(Lead.Status.DEMO.toString())) {
+                        lead.setDemoStartDate(startDatePicker.getValue());
+                        lead.setDemoEndDate(stopDatePicker.getValue());
+                    }
+                    else {
+                        lead.setStartDate(startDatePicker.getValue());
+                        lead.setEndDate(stopDatePicker.getValue());
+                    }
+
+                    // TODO EVERYTHING SAME HERE
+                }
+            });
         });
 
         customerButton.setOnAction(new EventHandler<javafx.event.ActionEvent>() {
