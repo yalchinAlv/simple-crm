@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="mainBorderPane" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.UserMenu">
+<BorderPane fx:id="mainBorderPane" prefHeight="850.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.UserMenu">
    <left>
       <VBox prefHeight="805.0" prefWidth="138.0" BorderPane.alignment="CENTER">
          <children>
@@ -74,8 +74,14 @@
          <right>
             <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button fx:id="createButton" mnemonicParsing="false" text="Create" />
-                  <Button fx:id="logoutButton" alignment="CENTER_RIGHT" mnemonicParsing="false" text="Logout" />
+                  <Button fx:id="createButton" alignment="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="104.0" text="Create">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Button>
+                  <Button fx:id="logoutButton" alignment="CENTER" mnemonicParsing="false" prefHeight="100.0" prefWidth="96.0" text="Logout">
+                     <font>
+                        <Font size="20.0" />
+                     </font></Button>
                </children>
             </HBox>
          </right>
