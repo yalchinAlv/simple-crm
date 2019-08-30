@@ -15,7 +15,8 @@ public class Lead {
         CLOSE("Close (80%)"),
         SIGNUP("Signup (100%)"),
         REJECTION("Rejection"),
-        POSTPONE("Postpone (0%)");
+        POSTPONE("Postpone (0%)"),
+        NEW("New");
 
         private String value;
         private Status(String value) {
@@ -93,6 +94,13 @@ public class Lead {
 
     public void setMonthlyFee(double monthlyFee) {
         this.monthlyFee = monthlyFee;
+    }
+
+    public void recalculateMonthlyFee() {
+        this.monthlyFee = 0;
+        for (VirtualServer vs : service) {
+            this.monthlyFee += vs.getMonthlyFee();
+        }
     }
 
     public String getStatus() {

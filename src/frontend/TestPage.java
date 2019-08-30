@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import model.Customer;
 import model.Lead;
 import model.User;
 import model.VirtualServer;
@@ -28,14 +29,18 @@ public class TestPage {
         LeadWindow controller = fxmlLoader.<LeadWindow>getController();
         List<VirtualServer> list = new ArrayList<>();
         //int virtualCores, int virtualRam, int storage, String diskType
-        list.add(new VirtualServer(5, 6, 7, "HDD"));
-        list.add(new VirtualServer(2, 3, 4, "HDD"));
-        list.add(new VirtualServer(1, 2, 3, "SDD"));
+        list.add(new VirtualServer(5, 6, 7, "7.2K"));
+        list.add(new VirtualServer(2, 3, 4, "10K"));
+        list.add(new VirtualServer(1, 2, 3, "SSD"));
 
         Lead lead = new Lead("My lead", list, LocalDate.now(), LocalDate.now());
+        Customer cust = new Customer();
+        cust.setCompanyName("COMPANY NAIMU");
 
+        lead.setOwner(cust);
+        lead.setStatus(Lead.Status.CLOSE.toString());
 
-        controller.initData(new User("pass", "full", "legal"), lead);
+        controller.initData(new User("pass", "full", User.Role.LEGAL_TEAM.toString()), lead);
         Scene scene = new Scene(root);
 
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
