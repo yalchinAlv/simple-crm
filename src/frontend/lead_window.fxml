@@ -9,16 +9,18 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.LeadWindow">
+
+<AnchorPane prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.LeadWindow">
    <children>
-      <VBox fx:id="mainVbox" alignment="CENTER" spacing="10.0">
+      <VBox fx:id="mainVbox" alignment="CENTER" layoutX="234.0" layoutY="179.0" spacing="10.0">
          <children>
             <ComboBox fx:id="statusComboBox" prefWidth="150.0" />
             <HBox>
                <children>
                   <Label text="Customer: " />
                   <Button fx:id="customerButton" mnemonicParsing="false" text="Button" />
-               </children></HBox>
+               </children>
+            </HBox>
             <HBox>
                <children>
                   <Label text="Start Date: " />
@@ -44,7 +46,8 @@
                <children>
                   <Label text="Discount: " />
                   <TextField fx:id="discountTextField" />
-               </children></HBox>
+               </children>
+            </HBox>
             <HBox>
                <children>
                   <Label fx:id="feeWithoutVatLabel" text="Fee without VAT: " />
@@ -61,6 +64,7 @@
                </children>
             </HBox>
             <Button fx:id="updateButton" mnemonicParsing="false" text="Update" />
-         </children></VBox>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
