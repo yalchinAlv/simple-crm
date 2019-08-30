@@ -36,10 +36,11 @@ public class TestPage {
         Lead lead = new Lead("My lead", list, LocalDate.now(), LocalDate.now());
         Customer cust = new Customer();
         cust.setCompanyName("COMPANY NAIMU");
-        lead.setOwner(cust);
-        lead.setStatus(Lead.Status.PROPOSE.toString());
 
-        controller.initData(new User("pass", "full", "legal"), lead);
+        lead.setOwner(cust);
+        lead.setStatus(Lead.Status.CLOSE.toString());
+
+        controller.initData(new User("pass", "full", User.Role.LEGAL_TEAM.toString()), lead);
         Scene scene = new Scene(root);
 
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();

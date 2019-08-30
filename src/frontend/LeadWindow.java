@@ -63,9 +63,7 @@ public class LeadWindow {
                 public void changed(ObservableValue<? extends String> ov,
                                     final String oldvalue, final String newvalue)
                 {
-                    lead.setStatus(newvalue);
-
-
+                    lead.setStatus(newvalue)
                 }
             });
             System.out.println(statusComboBox.getValue());
@@ -402,6 +400,89 @@ public class LeadWindow {
                 });
                 i++;
             }
+
+            if (user.getRole().equals(User.Role.LEGAL_TEAM.toString()) &&
+                    (lead.getStatus().equals(Lead.Status.CLOSE.toString()) || lead.getStatus().equals(Lead.Status.SIGNUP.toString()))) {
+                statusComboBox.setDisable(true);
+                customerButton.setDisable(true);
+                startDatePicker.setDisable(true);
+                stopDatePicker.setDisable(true);
+                serviceVbox1.setDisable(true);
+                serviceVbox2.setDisable(true);
+                serviceVbox3.setDisable(true);
+                newServiceBtn.setDisable(true);
+                discountTextField.setDisable(true);
+                updateButton.setDisable(true);
+            }
+
+            if (user.getRole().equals(User.Role.TECHNICAL_TEAM.toString()) &&
+                    (lead.getStatus().equals(Lead.Status.DEMO.toString())
+                            || lead.getStatus().equals(Lead.Status.PROPOSE.toString())
+                            || lead.getStatus().equals(Lead.Status.PROVE.toString())
+                            || lead.getStatus().equals(Lead.Status.CLOSE.toString())
+                            || lead.getStatus().equals(Lead.Status.SIGNUP.toString())
+                    )) {
+                statusComboBox.setDisable(true);
+                customerButton.setDisable(true);
+                startDatePicker.setDisable(true);
+                stopDatePicker.setDisable(true);
+                serviceVbox1.setDisable(true);
+                serviceVbox2.setDisable(true);
+                serviceVbox3.setDisable(true);
+                newServiceBtn.setDisable(true);
+                discountTextField.setDisable(true);
+                updateButton.setDisable(true);
+            }
+
+            if (user.getRole().equals(User.Role.FINANCE.toString()) &&
+                    (lead.getStatus().equals(Lead.Status.SIGNUP.toString())
+                    )) {
+                statusComboBox.setDisable(true);
+                customerButton.setDisable(true);
+                startDatePicker.setDisable(true);
+                stopDatePicker.setDisable(true);
+                serviceVbox1.setDisable(true);
+                serviceVbox2.setDisable(true);
+                serviceVbox3.setDisable(true);
+                newServiceBtn.setDisable(true);
+                discountTextField.setDisable(true);
+                updateButton.setDisable(true);
+            }
+
+            if (user.getRole().equals(User.Role.TECHNICAL_SUPPORT_TEAM.toString()) &&
+                    (lead.getStatus().equals(Lead.Status.DEMO.toString())
+                            || lead.getStatus().equals(Lead.Status.PROPOSE.toString())
+                            || lead.getStatus().equals(Lead.Status.PROVE.toString())
+                            || lead.getStatus().equals(Lead.Status.CLOSE.toString())
+                            || lead.getStatus().equals(Lead.Status.SIGNUP.toString())
+                    )) {
+                statusComboBox.setDisable(true);
+                customerButton.setDisable(true);
+                startDatePicker.setDisable(true);
+                stopDatePicker.setDisable(true);
+                serviceVbox1.setDisable(true);
+                serviceVbox2.setDisable(true);
+                serviceVbox3.setDisable(true);
+                newServiceBtn.setDisable(true);
+                discountTextField.setDisable(true);
+                updateButton.setDisable(true);
+            }
+
+            if (user.getRole().equals(User.Role.FINANCE.toString()) &&
+                    (lead.getStatus().equals(Lead.Status.SIGNUP.toString())
+                    )) {
+                statusComboBox.setDisable(true);
+                customerButton.setDisable(true);
+                startDatePicker.setDisable(true);
+                stopDatePicker.setDisable(true);
+                serviceVbox1.setDisable(true);
+                serviceVbox2.setDisable(true);
+                serviceVbox3.setDisable(true);
+                newServiceBtn.setDisable(true);
+                discountTextField.setDisable(true);
+                updateButton.setDisable(true);
+            }
+
         });
 
         customerButton.setOnAction(new EventHandler<javafx.event.ActionEvent>() {
