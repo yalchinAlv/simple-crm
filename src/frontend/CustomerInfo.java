@@ -8,7 +8,7 @@ import javafx.scene.control.TextArea;
 
 import javax.swing.*;
 
-public class CostumerInfo {
+public class CustomerInfo {
     @FXML private Label companyName;
     @FXML private Label companyLegalName;
     @FXML private Label sector;
