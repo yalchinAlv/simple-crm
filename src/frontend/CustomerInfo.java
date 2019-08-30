@@ -1,10 +1,12 @@
 package frontend;
 
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TextArea;
+import model.Customer;
 
 import javax.swing.*;
 
@@ -27,4 +29,16 @@ public class CustomerInfo {
     @FXML private TextArea legalOwners;
     @FXML private TextArea techOwners;
     @FXML private SplitMenuButton leads;
+
+    Customer customer;
+
+    public void initData(Customer customer) {
+        this.customer = customer;
+    }
+
+    @FXML private void initialize() {
+        Platform.runLater(() -> {
+
+        });
+    }
 }

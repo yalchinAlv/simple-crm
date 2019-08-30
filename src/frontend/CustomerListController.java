@@ -30,7 +30,7 @@ public class CustomerListController {
 
     @FXML
     private void initialize() {
-        customerNameTab.setCellValueFactory(new PropertyValueFactory<Customer, String>("customerName"));
+        customerNameTab.setCellValueFactory(new PropertyValueFactory<Customer, String>("companyName"));
 
         ArrayList<Customer> customers = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
@@ -48,7 +48,7 @@ public class CustomerListController {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("customer_info.fxml"));
 
         Parent root = (Parent)fxmlLoader.load();
-        CreateLead controller = fxmlLoader.<CreateLead>getController();
+        CustomerInfo controller = fxmlLoader.<CustomerInfo>getController();
 
         controller.initData((Customer)customerTable.getSelectionModel().getSelectedItem());
         Scene scene = new Scene(root);
