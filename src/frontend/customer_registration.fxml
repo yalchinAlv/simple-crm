@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
@@ -8,15 +9,15 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:controller="frontend.CustomerRegistration" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="770.0" prefWidth="656.0" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.CustomerRegistration">
    <top>
       <VBox alignment="TOP_CENTER" prefHeight="128.0" prefWidth="650.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Costumer Registration">
+            <Label text="Customer Registration">
                <font>
                   <Font size="40.0" />
                </font></Label>
-            <Button mnemonicParsing="false" text="Select From existing" />
+            <Button fx:id="selectFromExistingButton" mnemonicParsing="false" text="Select From existing" />
          </children>
       </VBox>
    </top>
@@ -30,7 +31,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField prefWidth="330.0" />
+                  <TextField fx:id="compNameText" prefWidth="330.0" />
                </children>
             </HBox>
             <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="140.0">
@@ -40,7 +41,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField prefWidth="330.0" />
+                  <TextField fx:id="compLegalNameText" prefWidth="330.0" />
                </children>
             </HBox>
             <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="265.0">
@@ -50,7 +51,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField prefWidth="330.0" />
+                  <ComboBox fx:id="comboBoxSector" prefHeight="31.0" prefWidth="330.0" />
                </children>
             </HBox>
             <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="251.0">
@@ -60,7 +61,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField prefWidth="330.0" />
+                  <ComboBox fx:id="comboBoxIndustry" prefHeight="31.0" prefWidth="329.0" />
                </children>
             </HBox>
             <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="252.0">
@@ -70,7 +71,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField prefWidth="330.0" />
+                  <TextField fx:id="countryName" prefWidth="330.0" />
                </children>
             </HBox>
             <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="285.0">
@@ -80,7 +81,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField prefWidth="330.0" />
+                  <TextField fx:id="cityName" prefWidth="330.0" />
                </children>
             </HBox>
             <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="193.0">
@@ -90,7 +91,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField prefWidth="330.0" />
+                  <TextField fx:id="billAddressText" prefWidth="330.0" />
                </children>
             </HBox>
             <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="205.0">
@@ -100,7 +101,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField prefWidth="330.0" />
+                  <TextField fx:id="legalAddressText" prefWidth="330.0" />
                </children>
             </HBox>
             <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="158.0">
@@ -110,7 +111,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField prefWidth="330.0" />
+                  <TextField fx:id="acqChannelText" prefWidth="330.0" />
                </children>
             </HBox>
             <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="142.0">
@@ -120,7 +121,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField prefWidth="330.0" />
+                  <TextField fx:id="cpNameText" prefWidth="330.0" />
                </children>
             </HBox>
             <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="148.0">
@@ -130,7 +131,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField prefHeight="31.0" prefWidth="330.0" />
+                  <TextField fx:id="cpEmailText" prefHeight="31.0" prefWidth="330.0" />
                </children>
             </HBox>
             <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="14.0">
@@ -140,7 +141,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField prefHeight="31.0" prefWidth="330.0" />
+                  <TextField fx:id="cpLanNum" prefHeight="31.0" prefWidth="330.0" />
                </children>
             </HBox>
             <HBox layoutX="10.0" layoutY="63.0" prefHeight="100.0" prefWidth="200.0" spacing="90.0">
@@ -150,7 +151,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField prefWidth="330.0" />
+                  <TextField fx:id="cpCellNum" prefWidth="330.0" />
                </children>
             </HBox>
             <HBox layoutX="10.0" layoutY="108.0" prefHeight="100.0" prefWidth="200.0" spacing="218.0">
@@ -160,7 +161,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField prefWidth="330.0" />
+                  <TextField fx:id="salesOwnerText" prefWidth="330.0" />
                </children>
             </HBox>
             <HBox layoutX="10.0" layoutY="146.0" prefHeight="100.0" prefWidth="200.0" spacing="208.0">
@@ -170,7 +171,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField prefWidth="330.0" />
+                  <TextField fx:id="legalOwnerText" prefWidth="330.0" />
                </children>
             </HBox>
             <HBox layoutX="10.0" layoutY="179.0" prefHeight="100.0" prefWidth="200.0" spacing="176.0">
@@ -180,12 +181,12 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <TextField prefWidth="330.0" />
+                  <TextField fx:id="techOwnerText" prefWidth="330.0" />
                </children>
             </HBox>
             <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="133.0" text="Next" textAlignment="RIGHT" />
+                  <Button fx:id="nextButton" mnemonicParsing="false" prefHeight="31.0" prefWidth="133.0" text="Next" textAlignment="RIGHT" />
                </children>
             </HBox>
          </children>
