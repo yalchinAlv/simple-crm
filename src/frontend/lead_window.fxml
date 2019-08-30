@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.LeadWindow">
    <children>
-      <VBox alignment="CENTER">
+      <VBox fx:id="mainVbox" alignment="CENTER" spacing="10.0">
          <children>
-            <Label fx:id="statusLabel" text="STATUS: XX %">
-               <font>
-                  <Font size="25.0" />
-               </font>
-            </Label>
+            <ComboBox fx:id="statusComboBox" prefWidth="150.0" />
             <HBox>
                <children>
                   <Label text="Customer: " />
@@ -26,43 +22,45 @@
             <HBox>
                <children>
                   <Label text="Start Date: " />
-                  <DatePicker />
+                  <DatePicker fx:id="startDatePicker" />
                </children>
             </HBox>
             <HBox>
                <children>
                   <Label text="Stop Date: " />
-                  <DatePicker />
+                  <DatePicker fx:id="stopDatePicker" />
                </children>
             </HBox>
             <HBox>
                <children>
                   <Label text="Services: " />
-                  <VBox fx:id="serviceVbox1" />
-                  <VBox fx:id="serviceVbox2" />
-                  <VBox fx:id="serviceVbox3" />
+                  <VBox fx:id="serviceVbox1" spacing="5.0" />
+                  <VBox fx:id="serviceVbox2" spacing="5.0" />
+                  <VBox fx:id="serviceVbox3" spacing="5.0" />
                </children>
             </HBox>
+            <Button fx:id="newServiceBtn" mnemonicParsing="false" text="Add new service" />
             <HBox>
                <children>
                   <Label text="Discount: " />
-                  <TextField />
+                  <TextField fx:id="discountTextField" />
                </children></HBox>
             <HBox>
                <children>
-                  <Label text="Fee without VAT: " />
+                  <Label fx:id="feeWithoutVatLabel" text="Fee without VAT: " />
                </children>
             </HBox>
             <HBox>
                <children>
-                  <Label text="VAT: " />
+                  <Label fx:id="vatLabel" text="VAT: " />
                </children>
             </HBox>
             <HBox>
                <children>
-                  <Label text="Total: " />
+                  <Label fx:id="totalLabel" text="Total: " />
                </children>
             </HBox>
+            <Button fx:id="updateButton" mnemonicParsing="false" text="Update" />
          </children></VBox>
    </children>
 </AnchorPane>
