@@ -63,8 +63,8 @@ public class Test{
 //          List<VirtualServer> vs = myLead.getDemoService();
 //          System.out.println(vs.get(0).getId());
           CustomerDB customerDB = new CustomerDB();
-          List<String> myList = customerDB.getAllCustomers();
-          System.out.println(myList.get(2));
+          //List<String> myList = customerDB.getAllCustomers();
+          //System.out.println(myList.get(2));
     }
 
 
