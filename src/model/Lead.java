@@ -29,6 +29,7 @@ public class Lead {
     }
 
     private Customer owner;
+    private String ownerName;
     private String name;
     private String status;
     private List<VirtualServer> service;
@@ -150,4 +151,8 @@ public class Lead {
     public void setOwner(Customer owner) {
         this.owner = owner;
     }
+
+    public String getOwnerName() { if (owner != null) return owner.getCompanyName(); return null; }
+
+    public void setOwnerName( String ownerName) { this.ownerName = ownerName; }
 }
