@@ -11,6 +11,7 @@ package frontend;
         import javafx.scene.control.cell.PropertyValueFactory;
         import javafx.scene.input.MouseEvent;
         import javafx.stage.Stage;
+        import model.Customer;
 
         import java.io.IOException;
         import java.util.ArrayList;
@@ -25,33 +26,47 @@ public class CustomerListCusreg {
 
     @FXML
     private void initialize() {
-        customerNameTab.setCellValueFactory(new PropertyValueFactory<Customer, String>("customerName"));
+        customerNameTab.setCellValueFactory(new PropertyValueFactory<Customer, String>("companyName"));
 
         ArrayList<Customer> customers = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
-            customers.add(new Customer("Customer #" + i));
+            Customer cust = new Customer();
+            cust.setCompanyName("Customer " + i);
+            customers.add(cust);
         }
 
         customerTable.getItems().setAll(customers);
     }
 
     @FXML
-    public void clickItem(MouseEvent event) {
-        System.out.println(((Customer)customerTable.getSelectionModel().getSelectedItem()).getCustomerName());
+    public void clickItem(MouseEvent event) throws IOException {
 
-        Parent tableViewParent = null;
-        try {
-            tableViewParent = FXMLLoader.load(getClass().getResource("test_page.fxml"));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        Scene tableViewScene = new Scene(tableViewParent);
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("create_lead.fxml"));
+
+        Parent root = (Parent)fxmlLoader.load();
+        CreateLead controller = fxmlLoader.<CreateLead>getController();
+
+        controller.initData((Customer)customerTable.getSelectionModel().getSelectedItem());
+        Scene scene = new Scene(root);
 
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        window.setScene(tableViewScene);
+        window.setScene(scene);
         window.show();
-
-        System.out.println("HERE");
+//        System.out.println(((Customer)customerTable.getSelectionModel().getSelectedItem()).getCustomerName());
+//
+//        Parent tableViewParent = null;
+//        try {
+//            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("create_lead.fxml"));
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        Scene tableViewScene = new Scene(tableViewParent);
+//
+//        Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
+//        window.setScene(tableViewScene);
+//        window.show();
+//
+//        System.out.println("HERE");
     }
 
     public void setPrevScene(Scene scene, Stage stage) {
@@ -60,23 +75,6 @@ public class CustomerListCusreg {
 
         System.out.println(primaryStage);
         System.out.println(previousScene);
-    }
-
-
-    public class Customer {
-        String customerName;
-
-        public Customer(String name) {
-            customerName = name;
-        }
-
-        public String getCustomerName() {
-            return customerName;
-        }
-
-        public void setCustomerName(String customerName) {
-            this.customerName = customerName;
-        }
     }
 }
 
