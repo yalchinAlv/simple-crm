@@ -63,7 +63,7 @@ public class LeadWindow {
                 public void changed(ObservableValue<? extends String> ov,
                                     final String oldvalue, final String newvalue)
                 {
-                    lead.setStatus(newvalue)
+                    lead.setStatus(newvalue);
                 }
             });
             System.out.println(statusComboBox.getValue());
