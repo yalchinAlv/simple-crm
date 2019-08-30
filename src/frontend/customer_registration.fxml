@@ -8,15 +8,15 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:controller="frontend.CustomerRegistration" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="770.0" prefWidth="656.0" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.CustomerRegistration">
    <top>
       <VBox alignment="TOP_CENTER" prefHeight="128.0" prefWidth="650.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Costumer Registration">
+            <Label text="Customer Registration">
                <font>
                   <Font size="40.0" />
                </font></Label>
-            <Button mnemonicParsing="false" text="Select From existing" />
+            <Button fx:id="selectFromExistingButton" mnemonicParsing="false" text="Select From existing" />
          </children>
       </VBox>
    </top>
@@ -185,7 +185,7 @@
             </HBox>
             <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="133.0" text="Next" textAlignment="RIGHT" />
+                  <Button fx:id="nextButton" mnemonicParsing="false" prefHeight="31.0" prefWidth="133.0" text="Next" textAlignment="RIGHT" />
                </children>
             </HBox>
          </children>
