@@ -4,6 +4,28 @@ import java.util.UUID;
 
 public class VirtualServer {
 
+    public static final int[][] VS_TYPES = {
+            {1, 2, 10},
+            {2, 4, 20},
+            {4, 8, 40},
+            {4, 16, 50},
+            {8, 16, 100},
+            {8, 32, 110},
+            {8, 64, 120},
+            {12, 24, 240},
+            {12, 36, 250},
+            {24, 48, 300},
+            {24, 96, 310},
+            {32, 64, 620},
+            {32, 128, 630},
+            {32, 192, 640},
+            {32, 256, 650}
+    };
+
+    public static final double K_72 = 0.05;
+    public static final double K_10 = 0.07;
+    public static final double SSD = 0.09;
+
     private String id;
     private int virtualCores;
     private int virtualRam;
@@ -60,5 +82,25 @@ public class VirtualServer {
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public double getMonthlyFee() {
+        double fee = 0;
+        for (int[] vs : VS_TYPES) {
+            if (vs[0] == virtualCores && vs[1] == virtualRam) {
+                fee = vs[2];
+            }
+        }
+
+        if (diskType.equals("7.2K"))
+            fee += K_72 * diskSpace;
+        else if (diskType.equals("10K"))
+            fee += K_10 * diskSpace;
+        else if (diskType.equals("SSD"))
+            fee += SSD * diskSpace;
+        else
+            return -1;
+
+        return fee;
     }
 }

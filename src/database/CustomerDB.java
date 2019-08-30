@@ -52,7 +52,7 @@ public class CustomerDB {
             //Get legal owners
             List<String> LegOwners = c.getLegalOwners();
             int i ;
-            for (i = 17 ; i <= 17 + LegOwners.size();i++){
+            for (i = 17 ; i <= 17 + LegOwners.size() - 1;i++){
                 stmt.setString(i,LegOwners.get(i-17));
             }
             for (;i<= 19; i++){
@@ -61,7 +61,7 @@ public class CustomerDB {
 
             //Get tech owners
             List<String> techOwners = c.getTechOwners();
-            for (i = 20 ; i <= 20 + techOwners.size();i++){
+            for (i = 20 ; i <= 20 + techOwners.size() - 1;i++){
                 stmt.setString(i,techOwners.get(i-20));
             }
             for (;i<= 22; i++){
@@ -71,7 +71,7 @@ public class CustomerDB {
             //Get leads
             List<Lead> leads = c.getLeads();
 
-            for (i = 23 ; i <= 23 + leads.size();i++){
+            for (i = 23 ; i <= 23 + leads.size()-1 ;i++){
                 stmt.setString(i, leads.get(i-23).getName());
             }
             for (;i<= 27; i++){
@@ -146,9 +146,15 @@ public class CustomerDB {
 
 
                 List<Lead> leads = new ArrayList<Lead>();
-                //TOOO ADDDD ADDD LEADS
+                LeadDB leadDB = new LeadDB();
 
+                for (int i = 0; i <5; i++){
+                    if (leadNames.get(i) != null){
+                        leads.add(leadDB.getLead(leadNames.get(i)));
+                    }
+                }
 
+                toReturn.setLeads(leads);
 
             }
             stmt.close();
@@ -161,11 +167,11 @@ public class CustomerDB {
     }
 
     // Give all the customers
-    public List<String> getAllCustomersNames(){
+    public List<Customer> getAllCustomers(){
         String query = "select cname from Customers";
         PreparedStatement stmt = null;
         ResultSet rslt = null;
-        List<String> names = new ArrayList<String>();
+        List<Customer> customers = new ArrayList<Customer>();
 
         try{
             stmt = connection.prepareStatement(query);
@@ -174,7 +180,7 @@ public class CustomerDB {
 
             while(rslt.next()){
 
-                names.add(rslt.getString("cName"));
+                customers.add( this.getCustomer(rslt.getString("cName")) );
             }
             stmt.close();
         }
@@ -182,7 +188,7 @@ public class CustomerDB {
             return null;
         }
 
-        return names;
+        return customers;
     }
 
     public boolean deleteCustomer(String toDelete){

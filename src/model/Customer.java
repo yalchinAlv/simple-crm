@@ -203,4 +203,9 @@ public class Customer {
     public void setLeads(List<Lead> leads) {
         this.leads = leads;
     }
+
+    public void addLead(Lead lead) {
+        leads.add(lead);
+        lead.setOwner(this);
+    }
 }
