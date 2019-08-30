@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
@@ -9,7 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="956.0" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.CreateLead">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.CreateLead">
    <top>
       <Label text="Create Lead" BorderPane.alignment="CENTER">
          <font>
@@ -18,12 +19,12 @@
       </Label>
    </top>
    <center>
-      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="447.0" prefWidth="825.0" BorderPane.alignment="TOP_LEFT">
+      <BorderPane BorderPane.alignment="TOP_LEFT">
          <top>
-            <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
+            <HBox spacing="20.0" BorderPane.alignment="CENTER">
                <children>
-                  <ComboBox fx:id="comboBoxVRs" prefHeight="31.0" prefWidth="186.0" promptText="VRs" visibleRowCount="15" />
-                  <TextField fx:id="textFieldVRAmount" prefHeight="31.0" prefWidth="51.0" promptText="VRs" />
+                  <ComboBox fx:id="comboBoxVRs" prefHeight="31.0" prefWidth="186.0" promptText="VS" visibleRowCount="15" />
+                  <TextField fx:id="textFieldVRAmount" prefHeight="31.0" prefWidth="51.0" promptText="0" />
                   <Button fx:id="decButton" mnemonicParsing="false" prefHeight="31.0" prefWidth="35.0" text="-" />
                             <Button fx:id="incButton" mnemonicParsing="false" prefHeight="31.0" prefWidth="35.0" text="+" />
                   <ComboBox fx:id="comboBoxStorage" prefHeight="31.0" prefWidth="105.0" promptText="Storage" />
@@ -33,11 +34,14 @@
             </HBox>
          </top>
          <center>
-            <TextArea fx:id="textAreaAddedLeads" prefHeight="100.0" prefWidth="800.0" BorderPane.alignment="TOP_LEFT" />
+            <TextArea fx:id="textAreaAddedLeads" prefHeight="202.0" prefWidth="769.0" BorderPane.alignment="TOP_LEFT">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding></TextArea>
          </center>
       </BorderPane>
    </center>
-   <right>
-      <Button fx:id="nextButton" mnemonicParsing="false" prefHeight="31.0" prefWidth="114.0" text="NEXT" BorderPane.alignment="BOTTOM_CENTER" />
-   </right>
+   <bottom>
+      <Button fx:id="nextButton" mnemonicParsing="false" text="NEXT" BorderPane.alignment="CENTER" />
+   </bottom>
 </BorderPane>
