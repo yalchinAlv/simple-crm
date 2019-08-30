@@ -13,7 +13,7 @@
    <left>
       <VBox prefHeight="805.0" prefWidth="138.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="userProfileButton" mnemonicParsing="false" prefHeight="106.0" prefWidth="146.0" text="Profile" textAlignment="CENTER">
+            <Button fx:id="userProfileButton" mnemonicParsing="false" prefHeight="106.0" prefWidth="118.0" text="Profile" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font></Button>

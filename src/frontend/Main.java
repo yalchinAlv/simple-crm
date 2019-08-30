@@ -14,7 +14,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("user-menu.fxml"));
         primaryStage.setTitle("SimpleCRM");
 
-        primaryStage.setScene(new Scene(root, 1300, 900));
+        primaryStage.setScene(new Scene(root, 920, 850));
         //primaryStage.setFullScreen(true);
         //primaryStage.setMaximized(true);
         primaryStage.show();

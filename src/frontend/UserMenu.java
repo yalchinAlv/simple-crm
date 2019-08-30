@@ -94,5 +94,20 @@ public class UserMenu {
             }
         });
 
+        customerAnalysisButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("customer_analysis.fxml"));
+                Parent root = null;
+                try {
+                    root = (Parent)fxmlLoader.load();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                CustomerAnalysis controller = fxmlLoader.<CustomerAnalysis>getController();
+                mainBorderPane.setCenter(root);
+            }
+        });
+
     }
 }
