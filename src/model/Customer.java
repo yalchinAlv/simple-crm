@@ -201,7 +201,8 @@ public class Customer {
     }
 
     public void setLeads(List<Lead> leads) {
-        this.leads = leads;
+        for (Lead lead : leads)
+            addLead(lead);
     }
 
     public void addLead(Lead lead) {

@@ -32,7 +32,7 @@ public class TestPage {
         list.add(new VirtualServer(2, 3, 4, "HDD"));
         list.add(new VirtualServer(1, 2, 3, "SDD"));
 
-        Lead lead = new Lead("My lead", list, LocalDate.now(), LocalDate.now(), 32.2);
+        Lead lead = new Lead("My lead", list, LocalDate.now(), LocalDate.now());
 
 
         controller.initData(new User("pass", "full", "legal"), lead);
