@@ -28,7 +28,6 @@ public class UserMenu {
     @FXML private Button warehouseButton;
     @FXML private Button logoutButton;
     @FXML private Button createButton;
-    @FXML private CustomerRegistration newCustomer;
 
 
     @FXML private BorderPane mainBorderPane;
@@ -61,15 +60,13 @@ public class UserMenu {
                 }
                 CustomerRegistration controller = fxmlLoader.<CustomerRegistration>getController();
                 mainBorderPane.setCenter(root);
-                newCustomer = new CustomerRegistration();
             }
         });
 
         logoutButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-
-                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/login_page.fxml"));
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("login_page.fxml"));
                 Parent root = null;
                 try {
                     root = (Parent)fxmlLoader.load();
@@ -77,25 +74,25 @@ public class UserMenu {
                     e.printStackTrace();
                 }
                 Stage primaryStage = (Stage) logoutButton.getScene().getWindow();
-
                 primaryStage.setScene(new Scene(root, 1300, 900));
+                primaryStage.show();
             }
         });
 
-//        newCustomer.getNextButton().setOnAction(new EventHandler<ActionEvent>() {
-//            @Override
-//            public void handle(ActionEvent event) {
-//                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("create_lead.fxml"));
-//                Parent root = null;
-//                try {
-//                    root = (Parent)fxmlLoader.load();
-//                } catch (IOException e) {
-//                    e.printStackTrace();
-//                }
-//                CreateLead controller = fxmlLoader.<CreateLead>getController();
-//                mainBorderPane.setCenter(root);
-//            }
-//        });
+        listOfLeadsButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("leads_list.fxml"));
+                Parent root = null;
+                try {
+                    root = (Parent)fxmlLoader.load();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                LeadsList controller = fxmlLoader.<LeadsList>getController();
+                mainBorderPane.setCenter(root);
+            }
+        });
 
     }
 }
