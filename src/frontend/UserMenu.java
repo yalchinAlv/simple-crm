@@ -74,7 +74,7 @@ public class UserMenu {
                     e.printStackTrace();
                 }
                 Stage primaryStage = (Stage) logoutButton.getScene().getWindow();
-                primaryStage.setScene(new Scene(root, 1300, 900));
+                primaryStage.setScene(new Scene(root, 920, 850));
                 primaryStage.show();
             }
         });
